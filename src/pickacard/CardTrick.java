@@ -37,7 +37,7 @@ public class CardTrick {
         Card userCard = new Card();
 
         //show which # to enter for each suit
-        for (int i = 0; i <= Card.SUITS.length - 1; i++) {
+        for (int i = 0; i < Card.SUITS.length; i++) {
             System.out.printf("Enter %d for %s%n", i, Card.SUITS[i]);
         }
 
@@ -55,6 +55,12 @@ public class CardTrick {
         System.out.printf("%d%s", userCard.getValue(), userCard.getSuit());
 
         // and search magicHand here
+        /*
+        compare value and suit
+        break loop when it matches
+        change to true when matches
+        */
+        
         //Then report the result here
     }
 
