@@ -40,7 +40,7 @@ public class CardTrick {
         //create player card object
         Card playerCard = new Card();
 
-        //ask user for Card value and loop till value is valid
+        //ask user for Card value and keep prompting till value is valid
         do {
             System.out.print("Enter your card number [1-13]: ");
 
@@ -52,6 +52,11 @@ public class CardTrick {
                 // if null or empty string, throw an exception
                 if (temp.isBlank() | temp.isEmpty()) {
                     throw new IllegalArgumentException("Error: Input a value.");
+                } 
+
+                                
+                else if (temp.matches("[-.,]+")) {
+                    throw new IllegalArgumentException("Error: Value is invalid.");
                 } 
                 
                 // if all char in input are digits, assign then exit loop
@@ -73,19 +78,51 @@ public class CardTrick {
             
         } while (!valid);
 
+        
         // reset to maintain loop while input is invalid
         valid = false;
 
-        //ask user for suit
-        System.out.println("Enter your card suit in words: ");
-        cardSuit = input.nextLine();
-        playerCard.setSuit(cardSuit);
+        
+        //ask user for Card type and keep prompting till value is valid
+        do{
+            try{
+                System.out.print("Enter your card suit (ex. 2clubs, spades, diamonds, hearts): ");
+                cardSuit = input.nextLine().trim();
+
+                //if null or empty string, throw an exception
+                if (cardSuit.isEmpty() || cardSuit.isBlank()) {
+                    throw new IllegalArgumentException("Error: You must enter yout suit!");
+                }
+
+                // if all char in input are letters, assign then exit loop
+                else if (cardSuit.matches("[a-zA-Z]+")) {
+                    playerCard.setSuit(cardSuit);
+                    valid = true;
+                } 
+
+                //otherwise throw an exception
+                else {
+                    throw new IllegalArgumentException("Error: Value is invalid.");
+                }
+            } 
+            
+            catch (InputMismatchException | IllegalArgumentException e) {
+                System.out.println(e + "\n");
+            }
+            
+        } while (!valid);
+
+        
+        // reset to maintain loop while input is invalid
+        valid = false;
+        
+        // and search magicHand here
+        
 
         //print player card
-        String format = "Your card is %d of %s\n";
+        String format = "Your card is %d of %s.\n";
         System.out.printf(format, playerCard.getValue(), playerCard.getSuit());
 
-        // and search magicHand here
         //Then report the result here
     }
 
