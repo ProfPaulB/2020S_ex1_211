@@ -47,15 +47,6 @@ public class Card {
         this.value = value;
     }
     
-    /**
-     * method that overrides the toString method to return suit + value
-     */
-    @Override
-    public String toString (){
-        String toPrint = "Your choice was: " + value + suit; 
-        return toPrint;
-    }
-    
     public boolean equals (Object obj){
         Card other = (Card)obj;
         

@@ -19,14 +19,8 @@ public class CardTrick {
         
         Card[] magicHand = new Card[7];
         
-        Random valueGenerator = new Random();
-        
-        Card userChoice = new Card(); 
-        
-        //adding my luckyCard object 
-        Card luckyCard = new Card ();
-        luckyCard.setValue(3);
-        luckyCard.setSuit("Diamonds");
+        Random valueGenerator = new Random(); 
+       
         
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
@@ -34,32 +28,26 @@ public class CardTrick {
             c.setValue(valueGenerator.nextInt(13)+1);
             c.setSuit(Card.SUITS[valueGenerator.nextInt(3)]);
             
-            magicHand [i] = c;
-            
-            System.out.println(magicHand[i].toString());
-            
+            magicHand [i] = c;    
         }
 
-        //insert code to ask the user for Card value and suit, create their card
-        System.out.println("Please enter card value (1-13): ");
-        userChoice.setValue(sc.nextInt());
-        
-        System.out.println("Please enter a number to represent a suit (hearts(0), diamonds(1), spades(2), or clubs(3)): ");
-        userChoice.setSuit(Card.SUITS[sc.nextInt()]);
+        //hard coded luckyCard Object 
+        Card luckyCard = new Card ();
+        luckyCard.setValue(3);
+        luckyCard.setSuit("Diamonds");
         
         
         
         // and search magicHand here
         boolean winner = false;
         for (int i = 0; i < magicHand.length; i++){
-            if(userChoice.equals(magicHand[i])){
+            if(luckyCard.equals(magicHand[i])){
                 winner = true;
             }
             
         }
         
-           
-   
+       
         //Then report the result here
              if (winner == true){
                 System.out.println("You've won!");
