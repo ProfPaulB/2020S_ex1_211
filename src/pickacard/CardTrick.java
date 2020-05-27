@@ -36,6 +36,7 @@ public class CardTrick {
 
         // For Testing: printing out magicHand array
         System.out.println("The hand of cards is:");
+        
         for (Card card : magicHand) {
             System.out.println(card.getValue() + " of " + card.getSuit());
         }
@@ -50,25 +51,28 @@ public class CardTrick {
         System.out.println("Enter the actual number for values 2 to 10."); 
         System.out.println("Enter 1 for Ace, 11 for Jack, 12 for Queen, and 13 for King."); 
         System.out.print("Enter a number for the value of your card: ");
+        
         userCard.setValue(input.nextInt());
         
         // prompt user for card suit, and set the suit attribute from input
         System.out.println("\nSuit of your card:");
         System.out.println("Enter 0 for Hearts, 1 for Diamonds, 2 for Spades, and 3 for Clubs.");
         System.out.print("Enter a number for the suit of your card: ");
+        
         userCard.setSuit(Card.SUITS[input.nextInt()]);
         
-        // For Testing: printing out magicHand array
-        System.out.println("\nYour card is the " + userCard.getValue() + " of " + userCard.getSuit());
+        
+        // testCard reference variable allows for reference flexibility (userCard or luckyCard)
+        Card testCard = userCard;      
+        
+        // For Testing: printing out the user's card
+        System.out.println("\nYour card is the " + testCard.getValue() + " of " + testCard.getSuit());
         
         
         // search through magicHand Card array for matches to user's Card
         
         // the boolean variable 'match' switches to true if card match is found
         boolean match = false;
-        
-        // testCard reference variable allows for reference flexibility (userCard or luckyCard)
-        Card testCard = userCard;        
         
         for (Card card: magicHand) {
             
