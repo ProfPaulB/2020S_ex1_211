@@ -9,8 +9,17 @@ package pickacard;
  * add your name as an author.
  * @author dancye
  * @author Paul Bonenfant
+ * @author Simran Dhillon
  */
 public class Card {
+
+    static Card nextLine() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    static double random() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
    private String suit; //clubs, spades, diamonds, hearts
    private int value;//1-13
