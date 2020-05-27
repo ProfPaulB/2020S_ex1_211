@@ -9,6 +9,7 @@ package pickacard;
  * add your name as an author.
  * @author dancye
  * @author Paul Bonenfant
+ * @author Melih Eren Arslan 26.05.2020
  */
 public class Card {
 
@@ -20,6 +21,8 @@ public class Card {
      * @return the suit
      */
     public String getSuit() {
+        
+        
         return suit;
     }
 
