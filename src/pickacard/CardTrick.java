@@ -25,7 +25,7 @@ public class CardTrick {
             /* Printing to test code to ensure random function working as needed
             System.out.println(c.getValue());
             System.out.println(c.getSuit());
-            */
+             */
         }
 
         //setting values for luckyCard
@@ -41,7 +41,7 @@ public class CardTrick {
                 }
             }
         }
-        
+
         //Then report the result here
         String format = (isWinner) ? "You win!" : "Sorry, better luck next time";
         System.out.println(format);
