@@ -79,16 +79,16 @@ public class CardTrick {
         // search through magicHand Card array for matches to testCard
         // the boolean variable 'match' switches to true if a card match is found
         // 2 cards match when the corresponding suits and values are equal
-        boolean match = false;
+        boolean isMatch = false;
         
         for (Card card: magicHand) {
             
             if (card.getValue() == testCard.getValue() && card.getSuit().equals(testCard.getSuit()) )
-                match = true;
+                isMatch = true;
         }
         
         // report the result of the card match search to user
-        if (match)
+        if (isMatch)
             System.out.println("You win! Your chosen card was found in the hand of random cards.");
         else
             System.out.println("You lose. Your chosen card was not found in the hand of random cards.");
