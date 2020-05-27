@@ -125,12 +125,12 @@ public class CardTrick {
         //reset to maintain loop while input is invalid
         valid = false;
         
-        System.out.println("");
-                
-        // PRINT MAGIC HANDS
-        for (int i =0; i < magicHand.length; i++) {
-            System.out.printf("magicHand%d is %d of %s\n", i+1, magicHand[i].getValue(), magicHand[i].getSuit());            
-        }
+//        System.out.println("");
+//                
+//        // PRINT MAGIC HANDS
+//        for (int i =0; i < magicHand.length; i++) {
+//            System.out.printf("magicHand%d is %d of %s\n", i+1, magicHand[i].getValue(), magicHand[i].getSuit());            
+//        }
        
         
         //print player card
@@ -143,8 +143,7 @@ public class CardTrick {
         //print result
         playerCard.printResult();
         
-        
-        
+
     }
 
 }
