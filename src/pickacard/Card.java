@@ -9,6 +9,9 @@ package pickacard;
  * add your name as an author.
  * @author dancye
  * @author Paul Bonenfant
+ * @author Kamil Trela
+ * 
+ * Updated: May 26 2020
  */
 public class Card {
 
@@ -43,7 +46,18 @@ public class Card {
     public void setValue(int value) {
         this.value = value;
     }
-   
-   
+
+    @Override
+    public String toString() {
+        return "Card{" + "suit=" + suit + ", value=" + value + '}';
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        Card c = (Card)obj;
+        return ((this.value == c.getValue()) && (this.suit == c.getSuit()));
+    }
+    
+    
     
 }
