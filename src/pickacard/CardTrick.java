@@ -35,13 +35,13 @@ public class CardTrick {
         System.out.println("enter suit");
         String suit = in.nextLine();
         // and search magicHand here
-        Card main = new Card();
+        Card luckyCard = new Card();
         main.setValue(1);
         main.setSuit("Hearts");
         //Then report the result here
         for (int j = 0; j < magicHand.length; j++) {
-            if ((magicHand[j].getValue() == main.getValue())
-                    && (magicHand[j].getSuit().equalsIgnoreCase(main.getSuit()))) {
+            if ((magicHand[j].getValue() == luckyCard.getValue())
+                    && (magicHand[j].getSuit().equalsIgnoreCase(luckyCard.getSuit()))) {
                 winn = true;
             }
         }
