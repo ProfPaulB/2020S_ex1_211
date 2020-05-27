@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class CardTrick {
 
     public static void main(String[] args) {
-
+        
         Card[] magicHand = new Card[7];
 
         for (int i = 0; i < magicHand.length; i++) {
@@ -34,6 +34,11 @@ public class CardTrick {
             System.out.printf(format, c.getValue(), c.getSuit());
         }
         */
+        
+        Card luckyCard = new Card();
+        luckyCard.setValue(13);
+        luckyCard.setSuit(Card.SUITS[3]);
+        
         //insert code to ask the user for Card value and suit, create their card
         Scanner input = new Scanner(System.in);
         Card userCard = new Card();
