@@ -26,7 +26,8 @@ public class CardTrick {
             // random ints fall within required Card attribute ranges
             int randomInt_1to13 = 1 + (int) (Math.random() * 13);
             int randomInt_0to3 = (int) (Math.random() * 4);
-
+            
+            // randomly set the value and suit of the card in hand array
             c.setValue(randomInt_1to13);
             c.setSuit(Card.SUITS[randomInt_0to3]);
             
@@ -34,13 +35,16 @@ public class CardTrick {
             magicHand[i] = c;
         }
 
-        // For Testing: printing out magicHand array
+        // === For Testing: printing out magicHand array
         System.out.println("The hand of cards is:");
         
         for (Card card : magicHand) {
             System.out.println(card.getValue() + " of " + card.getSuit());
         }
+        // === End of Testing Block ===
+        
 
+        // === Start of User Input Block ===
         // ask the user for Card value and suit, and store as a Card object
         Scanner input = new Scanner(System.in);
         Card userCard = new Card();
@@ -61,17 +65,20 @@ public class CardTrick {
         
         userCard.setSuit(Card.SUITS[input.nextInt()]);
         
+        // === End of User Input Block ===
         
-        // testCard reference variable allows for reference flexibility (userCard or luckyCard)
+        
+        // testCard variable allows for flexibile referencing (userCard or luckyCard)
         Card testCard = userCard;      
         
-        // For Testing: printing out the user's card
+        // For Testing: printing out the specific card to match
         System.out.println("\nYour card is the " + testCard.getValue() + " of " + testCard.getSuit());
+        // === End of Testing Block ===
         
         
-        // search through magicHand Card array for matches to user's Card
-        
-        // the boolean variable 'match' switches to true if card match is found
+        // search through magicHand Card array for matches to testCard
+        // the boolean variable 'match' switches to true if a card match is found
+        // 2 cards match when the corresponding suits and values are equal
         boolean match = false;
         
         for (Card card: magicHand) {
@@ -82,9 +89,9 @@ public class CardTrick {
         
         // report the result of the card match search to user
         if (match)
-            System.out.println("You win! Your chosen card is in the hand of random cards.");
+            System.out.println("You win! Your chosen card was found in the hand of random cards.");
         else
-            System.out.println("You lose. Your chosen card is not in the hand of random cards.");
+            System.out.println("You lose. Your chosen card was not found in the hand of random cards.");
 
     }
 
