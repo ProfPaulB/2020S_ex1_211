@@ -116,14 +116,33 @@ public class CardTrick {
         // reset to maintain loop while input is invalid
         valid = false;
         
-        // and search magicHand here
         
-
+        for (int i = 0; i < magicHand.length; i++) {
+            System.out.printf("magicHand%d is %d of %s\n", i, magicHand[i].getValue(), magicHand[i].getSuit());            
+        }
+        
+        // and search magicHand here
+        boolean checkValue = false;
+        boolean checkSuit = false;
+        for (int i = 0; i < magicHand.length; i++) {
+            if (playerCard.getValue() == magicHand[0].getValue() &&
+                playerCard.getSuit()== magicHand[0].getSuit()){
+                System.out.println("CONGRATULATIONS! Your card is in the magic hand!");
+            }
+            else {    
+                System.out.println("Where the heck did you get that card?!");
+                //System.out.println("SORRY! Your card is NOT in the magic hand!");
+                break;
+            }
+            
+        }
+        
+        
+        //Then report the result here
         //print player card
         String format = "Your card is %d of %s.\n";
         System.out.printf(format, playerCard.getValue(), playerCard.getSuit());
 
-        //Then report the result here
     }
 
 }

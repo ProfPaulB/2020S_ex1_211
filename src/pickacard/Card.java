@@ -39,7 +39,7 @@ public class Card {
         } 
         
         else {
-            throw new IllegalArgumentException("Error: That's not a suit! Choose from clubs, spades, diamonds or hearts.");
+            throw new IllegalArgumentException("Error: Please choose from clubs, spades, diamonds or hearts.");
         }
     }
 
