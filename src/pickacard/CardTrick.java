@@ -18,7 +18,7 @@ public class CardTrick {
         Scanner input = new Scanner(System.in); // scanner object
         Card[] magicHand = new Card[7];
         
-        //Lucky Card is 5 Hearts
+        //Lucky Card is 5 Hearts.
         luckyCard.setValue(5);
         luckyCard.setSuit(Card.SUITS[0]);
         
