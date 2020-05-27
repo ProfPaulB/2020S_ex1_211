@@ -47,9 +47,9 @@ public class CardTrick {
         luckyHand.setSuit(cardSuit);
        
        
-        for (int j=0; j<magicHand.length;i++) {
+        for (int j=0; j<magicHand.length;j++) {
             
-            if magicHand[i].getValue() == luckyHand.getValue()) && (magicHand[i].getSuit().equals(luckyHand.getSuit()) {
+            if( (magicHand[j].getValue() == luckyHand.getValue()) && (magicHand[j].getSuit().equals(luckyHand.getSuit()))) {
                 
                 System.out.println("You are so lucky, you won!!");
             }
