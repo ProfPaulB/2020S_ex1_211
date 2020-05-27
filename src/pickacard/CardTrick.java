@@ -35,13 +35,13 @@ public class CardTrick {
             magicHand[i] = c;
         }
 
-        // === For Testing: printing out magicHand array
-        System.out.println("The hand of cards is:");
-        
-        for (Card card : magicHand) {
-            System.out.println(card.getValue() + " of " + card.getSuit());
-        }
-        // === End of Testing Block ===
+//        // === For Testing: printing out magicHand array
+//        System.out.println("The hand of cards is:");
+//        
+//        for (Card card : magicHand) {
+//            System.out.println(card.getValue() + " of " + card.getSuit());
+//        }
+//        // === End of Testing Block ===
         
 
         // === Start of User Input Block ===
@@ -71,9 +71,9 @@ public class CardTrick {
         // testCard variable allows for flexibile referencing (userCard or luckyCard)
         Card testCard = userCard;      
         
-        // For Testing: printing out the specific card to match
-        System.out.println("\nYour card is the " + testCard.getValue() + " of " + testCard.getSuit());
-        // === End of Testing Block ===
+//        // For Testing: printing out the specific card to match
+//        System.out.println("\nYour card is the " + testCard.getValue() + " of " + testCard.getSuit());
+//        // === End of Testing Block ===
         
         
         // search through magicHand Card array for matches to testCard
