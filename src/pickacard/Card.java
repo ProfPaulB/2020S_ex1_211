@@ -11,11 +11,12 @@ package pickacard;
  * @author Paul Bonenfant
  * @author Marjorie Teu - May 26, 2020
  */
-public class Card {
+public class Card{
 
    private String suit; //clubs, spades, diamonds, hearts
    private int value;//1-13
-
+   private boolean hasSameCard = false;
+   
    public static final String [] SUITS = {"Hearts", "Diamonds", "Spades", "Clubs"};
     /**
      * @return the suit
@@ -32,9 +33,8 @@ public class Card {
         // change input to lowercase for comparison
         suit = suit.toLowerCase();
 
-        // check if input is same as SUITS
-        // assign value if it has the same value in the array, otherwise throw an exception
-        if (suit.equals("clubs") || suit.equals("spades") || suit.equals("diamonds") || suit.equals("hearts")) {
+        // assign value if it has the same valueotherwise throw an exception
+        if (suit.equals("hearts") || suit.equals("diamonds") || suit.equals("spades") || suit.equals("clubs")) {
             this.suit = suit;
         } 
         
@@ -66,7 +66,48 @@ public class Card {
         }
     }
    
+    
+     /**
+     * checks if the card is in the magic hand
+     *
+     * @param card the card to be compared to the magic hand
+     * @param magicHand the array of cards in the magic hand
+     * return true if the card is in the magic hand
+     */
+    public boolean isInMagicHand(Card card, Card[] magicHand)  {
+        
+        // compares card to the array of magic hand 
+        for (int i = 0; i < magicHand.length; i++) {
 
+            // if there is a same card, return true then exit
+            if (card.getValue() == magicHand[i].getValue() && card.getSuit().equalsIgnoreCase(magicHand[i].getSuit())) { //
+                return hasSameCard=true;
+            }
+            
+            else {
+                //do nothing and check the next card
+            }
+        }
+        
+        //return false if there's not same card
+        return hasSameCard;
+        
+    }
     
+     /**
+     * print's result if card is in the magic hand or not.
+     *
+     * return result in string if card is in the magic hand or not.
+     */
+    public void printResult()  {
     
+        if (hasSameCard) { 
+            System.out.println("CONGRATULATIONS! Your card is in the magic hand!");
+        } 
+        
+        else {
+            System.out.println("SORRY! Your card is NOT in the magic hand!");
+        }
+
+    }
 }

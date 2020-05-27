@@ -16,30 +16,37 @@ public class CardTrick {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-        Card[] magicHand = new Card[7];
 
+        // magic hand cards
+        Card[] magicHand = new Card[7];
+        
+        // player card 
+        Card playerCard = new Card();
+        
         int cardNum;
         String cardSuit;
-        
+
         // created to maintain or exit a loop depending on the validity of the input
         boolean valid = false;
 
+        
+        // CREATE CARD
+        // create the 7 cards with random number and suit
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
 
             //set random value for card
-            c.setValue((int) (Math.random() * 13));
+            c.setValue((int) (1 + Math.random() * 13));
 
             //set random suit for card
-            c.setSuit(Card.SUITS[(int) (Math.random() * 3)]);
+            c.setSuit(Card.SUITS[(int)(Math.random() * 4)]);
 
             //assign c to magicHand
             magicHand[i] = c;
         }
 
-        //create player card object
-        Card playerCard = new Card();
 
+        //ASK FOR INPUT VALUE
         //ask user for Card value and keep prompting till value is valid
         do {
             System.out.print("Enter your card number [1-13]: ");
@@ -83,10 +90,12 @@ public class CardTrick {
         valid = false;
 
         
+        //ASK FOR INPUT SUIT
         //ask user for Card type and keep prompting till value is valid
         do{
+            
             try{
-                System.out.print("Enter your card suit (ex. 2clubs, spades, diamonds, hearts): ");
+                System.out.print("Enter your card suit (ex. hearts, diamonds, spades, clubs): ");
                 cardSuit = input.nextLine().trim();
 
                 //if null or empty string, throw an exception
@@ -113,36 +122,29 @@ public class CardTrick {
         } while (!valid);
 
         
-        // reset to maintain loop while input is invalid
+        //reset to maintain loop while input is invalid
         valid = false;
         
-        
-        for (int i = 0; i < magicHand.length; i++) {
-            System.out.printf("magicHand%d is %d of %s\n", i, magicHand[i].getValue(), magicHand[i].getSuit());            
+        System.out.println("");
+                
+        // PRINT MAGIC HANDS
+        for (int i =0; i < magicHand.length; i++) {
+            System.out.printf("magicHand%d is %d of %s\n", i+1, magicHand[i].getValue(), magicHand[i].getSuit());            
         }
+       
         
-        // and search magicHand here
-        boolean checkValue = false;
-        boolean checkSuit = false;
-        for (int i = 0; i < magicHand.length; i++) {
-            if (playerCard.getValue() == magicHand[0].getValue() &&
-                playerCard.getSuit()== magicHand[0].getSuit()){
-                System.out.println("CONGRATULATIONS! Your card is in the magic hand!");
-            }
-            else {    
-                System.out.println("Where the heck did you get that card?!");
-                //System.out.println("SORRY! Your card is NOT in the magic hand!");
-                break;
-            }
-            
-        }
-        
-        
-        //Then report the result here
         //print player card
-        String format = "Your card is %d of %s.\n";
+        String format = "\nYour card is %d of %s.\n";
         System.out.printf(format, playerCard.getValue(), playerCard.getSuit());
 
+        //search card in magic hand
+        playerCard.isInMagicHand(playerCard, magicHand);
+        
+        //print result
+        playerCard.printResult();
+        
+        
+        
     }
 
 }
