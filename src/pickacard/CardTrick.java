@@ -57,14 +57,13 @@ public class CardTrick {
         System.out.printf("Your card is %d%s", userCard.getValue(),
                  userCard.getSuit());
 
-        // and search magicHand here
-        //comment out later
+        //can get value and suit of each card in the magic hand - comment out
         System.out.print("\nTesting something for searching magicHand; "
                 + "The first card is magicHand is: ");
         int cardValue = magicHand[0].getValue();
         String cardSuit = magicHand[0].getSuit();
         System.out.println(cardValue + cardSuit);
-
+        //search through magic hand here
         //compare user's card to a card in magic hand
         boolean sameValue;//card value is the same
         boolean sameSuit;//card suit is the same
@@ -77,12 +76,9 @@ public class CardTrick {
             sameValue = magicHand[i].getValue() == userCard.getValue();
             sameSuit = magicHand[i].getSuit() == userCard.getSuit();
 
-            //when a card has the same value as user's card
+            //check if the card has the same value and suit as the user's card
             if (sameValue && sameSuit) {
-                //check if magicHand card has the same suit as userCard
-                //comment out later
-                System.out.printf("Is this your card?%n%d of %s",
-                         magicHand[i].getValue(), magicHand[i].getSuit());
+                //matched card found in magic hand
                 isMatched = true;
             }
         }
@@ -94,5 +90,4 @@ public class CardTrick {
             System.out.println("Your card wasn't in the Magic Hand.");
         }
     }
-
 }
