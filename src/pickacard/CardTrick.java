@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class CardTrick {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         Card[] magicHand = new Card[7];
 
@@ -27,17 +27,19 @@ public class CardTrick {
             magicHand[i] = c;
         }
 
-//        //Only for testing, show all the magicHand array result 
+//        //Only for testing, show all the magicHand array results 
 //        for (Card c : magicHand) {
-//            System.out.printf("Card value/suit: %d/%s%n", c.getValue(), c.getSuit());
+//            System.out.printf("Card value/suit: %d/%s%n", c.getValue(), 
+//                    c.getSuit());
 //        }
 
-        //Complete Task 6: add a luckyCard object and assign the value to 5 and "Hearts"
+        //Complete Task 6: add a luckyCard object and assign the value to 5 and
+        //"Hearts"
         Card luckyCard = new Card();
         luckyCard.setValue(5);
         luckyCard.setSuit("Hearts");
 
-        //Complete task 7: report the luckyCard result
+        //Complete task 7: report the luckyCard's result
         //Then report the result here
         boolean isMatched = true;
         for (Card c : magicHand) {
@@ -49,7 +51,8 @@ public class CardTrick {
                 isMatched = false;
             }
         }
-        String message = (isMatched) ? "Congratulations! You win!" : "Sorry! You lose!";
+        String message = 
+                (isMatched) ? "Congratulations! You win!" : "Sorry! You lose!";
         System.out.println(message);
     }
 }
