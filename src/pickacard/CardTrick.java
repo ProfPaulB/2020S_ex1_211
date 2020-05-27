@@ -47,18 +47,8 @@ public class CardTrick {
         luckyCard.setValue(1);
         luckyCard.setSuit("Spades");
         
-        // Create a new card to store users card choice
-        Card userCard = new Card();
-
-        // Ask user for their card value choice & set it to userCard
-        System.out.println("Enter your Card value, from 1 to 13 as an integer. "
-        + "Ace = 1, Jack = 11, Queen = 12, King = 13");
-        userCard.setValue(sc.nextInt());
-        
-        // Ask user for their suit choice & set it to userCard
-        System.out.println("Enter your suit choice as an integer from 0-3 "
-        + "Where 0 = hearts, 1 = diamonds, 2 = spades, 3 = clubs");
-        userCard.setSuit(Card.SUITS[sc.nextInt()]);
+        System.out.println("Your lucky card is: " + luckyCard.toString());
+        System.out.println("Let's see if you won...");
         
         // Create a boolean to set if the users card matches one of the magicHand cards 
         boolean winnerWinner = false;
@@ -66,7 +56,7 @@ public class CardTrick {
         // This loop iterates over our magicHand array and checks whether the users
         // card has the same value and suit, if it does winnerWinner changes to true.
         for (int i = 0; i < magicHand.length; i++){
-            if(userCard.equals(magicHand[i])){
+            if(luckyCard.equals(magicHand[i])){
                 winnerWinner = true;
             }
                 
