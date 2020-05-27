@@ -54,9 +54,9 @@ public class CardTrick {
                     throw new IllegalArgumentException("Error: Input a value.");
                 } 
                 
-                // if al char in input are digits, assign then exit loop
-                else if (temp.matches("[0-9]+")) {
-                    cardNum = input.nextInt();
+                // if all char in input are digits, assign then exit loop
+                else if (temp.matches("[0-9-]+")) {
+                    cardNum = Integer.parseInt(temp);
                     playerCard.setValue(cardNum);
                     valid = true;
                 } 
@@ -65,7 +65,6 @@ public class CardTrick {
                 else {
                     throw new IllegalArgumentException("Error: Value is invalid.");
                 }
-                
             } 
             
             catch (InputMismatchException | IllegalArgumentException e) {
