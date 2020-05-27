@@ -19,11 +19,11 @@ public class CardTrick {
 
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
-            
+
             //c.setValue(insert call to random number generator here)
             double random = 1 + Math.random() * 13;
             c.setValue((int) (random));
-            
+
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
             c.setSuit(Card.SUITS[(int) (Math.random() * 3)]);
             magicHand[i] = c;
@@ -54,46 +54,43 @@ public class CardTrick {
         userCard.setValue(userValue);
 
         //check user card - comment out 
-        System.out.printf("Your card is %d%s", userCard.getValue()
-                , userCard.getSuit());
+        System.out.printf("Your card is %d%s", userCard.getValue(),
+                 userCard.getSuit());
 
         // and search magicHand here
-        
         //comment out later
         System.out.print("\nTesting something for searching magicHand; "
                 + "The first card is magicHand is: ");
         int cardValue = magicHand[0].getValue();
         String cardSuit = magicHand[0].getSuit();
-        System.out.println(cardValue+cardSuit);
-        
+        System.out.println(cardValue + cardSuit);
+
         //compare user's card to a card in magic hand
         boolean sameValue;//card value is the same
         boolean sameSuit;//card suit is the same
-        
+
         //found matched card in the magic hand
         boolean isMatched = false;
-        
+
         //compare each card in the magic hand to the user's card
-        for(int i = 0; i < magicHand.length; i++){
+        for (int i = 0; i < magicHand.length; i++) {
             sameValue = magicHand[i].getValue() == userCard.getValue();
             sameSuit = magicHand[i].getSuit() == userCard.getSuit();
-            
+
             //when a card has the same value as user's card
-            if(sameValue){
+            if (sameValue && sameSuit) {
                 //check if magicHand card has the same suit as userCard
-                if(sameSuit){
-                    //comment out later
-                    System.out.printf("Is this your card?%n%d of %s"
-                        , magicHand[i].getValue(), magicHand[i].getSuit());
-                    isMatched = true;
-                }
+                //comment out later
+                System.out.printf("Is this your card?%n%d of %s",
+                         magicHand[i].getValue(), magicHand[i].getSuit());
+                isMatched = true;
             }
         }
 
         //Then report the result here
-        if(isMatched){
+        if (isMatched) {
             System.out.println("Your card was in the Magic Hand!");
-        }else{
+        } else {
             System.out.println("Your card wasn't in the Magic Hand.");
         }
     }
