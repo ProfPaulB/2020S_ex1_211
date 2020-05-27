@@ -9,6 +9,7 @@ package pickacard;
  * add your name as an author.
  * @author dancye
  * @author Paul Bonenfant
+ * @author Mustafa Shubbar, 2020
  */
 public class Card {
 
@@ -16,6 +17,7 @@ public class Card {
    private int value;//1-13
 
    public static final String [] SUITS = {"Hearts", "Diamonds", "Spades", "Clubs"};
+   
     /**
      * @return the suit
      */
