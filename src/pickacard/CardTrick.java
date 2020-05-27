@@ -45,6 +45,9 @@ public class CardTrick
       if (userMatch) {
          System.out.printf("Your %s suit with number %s is a match! You win!\n", "Hearts", 3);
       }
+      else {
+         System.out.println("You lost! Loser Loser Bottom Ruler!");
+      }
    }
 
 }
