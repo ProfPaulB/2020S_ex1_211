@@ -7,13 +7,11 @@ package pickacard;
  * @author dancye
  * @author Paul Bonenfant
  */
-import java.util.Scanner;
 
 public class CardTrick {
 
     public static void main(String[] args) {
         
-        Scanner sc = new Scanner(System.in);
         
         Card[] magicHand = new Card[7];
         
@@ -31,18 +29,16 @@ public class CardTrick {
         }
 
         //insert code to ask the user for Card value and suit, create their card
-        System.out.println("Enter Card Number: ");
+        Card luckyCard = new Card();
         
-        int crdNo = sc.nextInt();
+        luckyCard.setValue(4);
         
-        System.out.println("Enter Suit: ");
-        
-        String suit = sc.nextLine();
+        luckyCard.setSuit("Spade");
         // and search magicHand here
         for (int i = 0; i < magicHand.length; i++) {
             
-            if ((magicHand[i].getValue() == crdNo) &&
-                (magicHand[i].getSuit() == suit)) {
+            if ((magicHand[i].getValue() == luckyCard.getValue()) &&
+                (magicHand[i].getSuit() == luckyCard.getSuit())) {
             
                 win = true;
         }
