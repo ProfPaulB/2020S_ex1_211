@@ -14,7 +14,7 @@ public class CardTrick {
 
     public static void main(String[] args) {
 
-        // using a variable for # of cards makes the code more flexible
+        // using of variable for # of cards makes code more flexible
         int numOfCards = 7;
         Card[] magicHand = new Card[numOfCards];
 
@@ -29,7 +29,8 @@ public class CardTrick {
 
             c.setValue(randomInt_1to13);
             c.setSuit(Card.SUITS[randomInt_0to3]);
-
+            
+            // assign the random card c into the card hand array
             magicHand[i] = c;
         }
 
@@ -44,14 +45,14 @@ public class CardTrick {
         Card userCard = new Card();
         System.out.println("*** Pick a card by its value and suit ***\n");
         
-        // prompt user for card value, and set the value attribute
+        // prompt user for card value, and set the value attribute from input
         System.out.println("Value of your card:");
         System.out.println("Enter the actual number for values 2 to 10."); 
         System.out.println("Enter 1 for Ace, 11 for Jack, 12 for Queen, and 13 for King."); 
         System.out.print("Enter a number for the value of your card: ");
         userCard.setValue(input.nextInt());
         
-        // prompt user for card suit, and set the suit attribute
+        // prompt user for card suit, and set the suit attribute from input
         System.out.println("\nSuit of your card:");
         System.out.println("Enter 0 for Hearts, 1 for Diamonds, 2 for Spades, and 3 for Clubs.");
         System.out.print("Enter a number for the suit of your card: ");
@@ -60,13 +61,18 @@ public class CardTrick {
         // For Testing: printing out magicHand array
         System.out.println("\nYour card is the " + userCard.getValue() + " of " + userCard.getSuit());
         
+        
         // search through magicHand Card array for matches to user's Card
-        // the boolean variable called match switches to true if match is found
+        
+        // the boolean variable 'match' switches to true if card match is found
         boolean match = false;
+        
+        // testCard reference variable allows for reference flexibility (userCard or luckyCard)
+        Card testCard = userCard;        
         
         for (Card card: magicHand) {
             
-            if (card.getValue() == userCard.getValue() && card.getSuit().equals(userCard.getSuit()) )
+            if (card.getValue() == testCard.getValue() && card.getSuit().equals(testCard.getSuit()) )
                 match = true;
         }
         
