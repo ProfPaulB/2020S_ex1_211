@@ -43,13 +43,13 @@ public class CardTrick {
 
         //ask for suit and value
         System.out.println("Enter card suit - :");
-        int suit = input.nextInt();
+        int userSuit = input.nextInt();
         System.out.println("Enter card value - Ace=1, King=13:");
-        int value = input.nextInt();
+        int userValue = input.nextInt();
 
         //make card for user
-        userCard.setSuit(Card.SUITS[suit]);
-        userCard.setValue(value);
+        userCard.setSuit(Card.SUITS[userSuit]);
+        userCard.setValue(userValue);
 
         //check user card - comment out 
         System.out.printf("%d%s", userCard.getValue(), userCard.getSuit());
@@ -59,9 +59,29 @@ public class CardTrick {
         compare value and suit
         break loop when it matches
         change to true when matches
-        */
+         */
+        //comment out later
+        int cardValue = magicHand[0].getValue();
+        String cardSuit = magicHand[0].getSuit();
+        System.out.println(cardValue);
+        System.out.println(cardSuit);
         
+        //boolean sameSuit;
+        boolean sameValue;
+        for(int i = 0; i < magicHand.length; i++){
+            sameValue = magicHand[i].getValue() == userCard.getValue();
+            
+            //Search for first instance of identical value in magicHand
+            if(sameValue){
+                System.out.printf("Is this your card?%n%d of %s"
+                        , magicHand[i].getValue(), magicHand[i].getSuit());
+                //check if magicHand card has the same suit as userCard
+                break;
+            }
+        }
+
         //Then report the result here
+        
     }
 
 }
