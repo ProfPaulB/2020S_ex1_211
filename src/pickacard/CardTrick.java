@@ -53,6 +53,8 @@ public class CardTrick {
         luckyHand.setSuit(suit);
         luckyHand.setValue(value);
         
+        System.out.println("");
+        
         // Validating results here 
         for (int i = 0; i < magicHand.length; i++) {
             if (magicHand[i].getSuit().equals(suit) && 
