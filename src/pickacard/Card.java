@@ -9,12 +9,13 @@ package pickacard;
  * add your name as an author.
  * @author dancye
  * @author Paul Bonenfant
+ * @author Joanne Cecco May 26, 2020
  */
 public class Card {
 
    private String suit; //clubs, spades, diamonds, hearts
    private int value;//1-13
-
+   
    public static final String [] SUITS = {"Hearts", "Diamonds", "Spades", "Clubs"};
     /**
      * @return the suit
@@ -43,7 +44,5 @@ public class Card {
     public void setValue(int value) {
         this.value = value;
     }
-   
-   
-    
+      
 }
