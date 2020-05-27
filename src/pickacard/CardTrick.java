@@ -16,7 +16,7 @@ public class CardTrick {
     public static void main(String[] args) {
 
         Card[] magicHand = new Card[7];
-        
+
         for (int i = 0; i < magicHand.length; i++) {
             Random rnd = new Random();
             Card c = new Card();
@@ -26,9 +26,9 @@ public class CardTrick {
             c.setSuit(c.SUITS[rnd.nextInt(4)]);
             magicHand[i] = c;
         }
-        
+
         System.out.println();
-        
+
 //        For debugging purposes only
         for (Card card : magicHand) {
             System.out.println(card.getSuit() + " " + card.getValue());
@@ -37,7 +37,6 @@ public class CardTrick {
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
         //Then report the result here
-        
         //Step 4. of the assignment
 //         Scanner input = new Scanner(System.in);
 //         System.out.println("\nWhat is your suit?");
@@ -45,27 +44,29 @@ public class CardTrick {
 //         System.out.println("What is your Card Value?");
 //         int value = input.nextInt();
 //         System.out.println();
-        
+
         // Step 6. of the assignment
         Card luckyHand = new Card();
         String suit = "Hearts";
         int value = 5;
         luckyHand.setSuit(suit);
         luckyHand.setValue(value);
-        
+
         System.out.println("");
-        
+
         // Validating results here 
+        boolean inHand = false;
         for (int i = 0; i < magicHand.length; i++) {
-            if (magicHand[i].getSuit().equals(luckyHand.getSuit()) && 
-                    magicHand[i].getValue() == luckyHand.getValue()) {
-                System.out.println("Congrats! your card is in hand");
-            }
-            else {
-                System.out.println("No such card in hand!");
+            if (magicHand[i].getSuit().equals(luckyHand.getSuit())
+                    && magicHand[i].getValue() == luckyHand.getValue()) {
+                inHand = true;
             }
         }
-        
-    }
+        if (inHand) {
+            System.out.println("Congratulations! Card is in hand.");
+        } else {
+            System.out.println("No such card in hand!");
+        }
 
+    }
 }
