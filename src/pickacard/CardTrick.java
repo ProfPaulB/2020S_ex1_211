@@ -26,26 +26,26 @@ public class CardTrick
       }
       System.out.println(Arrays.toString(magicHand));
       //insert code to ask the user for Card value and suit, create their card
-      Scanner input = new Scanner(System.in);
-      System.out.print("Pick a suit (\"Hearts\", \"Diamonds\", \"Spades\", \"Clubs\"): ");
-      String inputSuit = input.nextLine();
-      inputSuit = inputSuit.trim();
-      System.out.printf("Pick a number for your %s suit (between 1 to 13): ", inputSuit);
-      int inputSuitNum = input.nextInt();
-      Card userCard = new Card();
-      userCard.setValue(inputSuitNum);
-      userCard.setSuit(inputSuit);
+//       Scanner input = new Scanner(System.in);
+//       System.out.print("Pick a suit (\"Hearts\", \"Diamonds\", \"Spades\", \"Clubs\"): ");
+//       String inputSuit = input.nextLine();
+//       inputSuit = inputSuit.trim();
+//       System.out.printf("Pick a number for your %s suit (between 1 to 13): ", inputSuit);
+//       int inputSuitNum = input.nextInt();
+      Card luckyCard = new Card();
+      luckyCard.setValue(3);
+      luckyCard.setSuit("Hearts");
       // and search magicHand here
       boolean userMatch = false;
       for (int i = 0; i < 7; i++) {
-         if (magicHand[i].equals(userCard)) {
+         if (magicHand[i].equals(luckyCard)) {
             userMatch = true;
             break;
          }
       }
       //Then report the result here
       if (userMatch) {
-         System.out.printf("Your %s suit with number %s is a match! You win!\n", inputSuit, inputSuitNum);
+         System.out.printf("Your %s suit with number %s is a match! You win!\n", "Hearts", 3);
       }
    }
 
