@@ -25,15 +25,14 @@ public class CardTrick {
         int cardValue = Integer.parseInt(sc.nextLine());
         System.out.println("Please enter the suit(Hearts, diamonds, spades or clubs)");
         String cardSuit = sc.nextLine();
-        int cValue;
-        String cSuit;
+        int luckyValue;
+        String luckySuit;
         for (Card magicHand1 : magicHand) // and search magicHand here
         {
-            Card c = new Card();
-            cValue = c.getValue();
-            cSuit = c.getSuit();
-            if (cardValue == cValue) {
-                if(cardSuit.equalsIgnoreCase(cSuit))
+            luckyValue = 5;
+            luckySuit = "Hearts";
+            if (cardValue == luckyValue) {
+                if(cardSuit.equalsIgnoreCase(luckySuit))
                 {
                     b = 1;
                 } 
