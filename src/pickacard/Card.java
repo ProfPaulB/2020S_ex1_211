@@ -9,7 +9,7 @@ package pickacard;
  * add your name as an author.
  * @author dancye
  * @author Paul Bonenfant
- * @author Marjorie Teu
+ * @author Marjorie Teu - May 26, 2020
  */
 public class Card {
 
@@ -29,6 +29,7 @@ public class Card {
      */
     public void setSuit(String suit) {
         this.suit = suit;
+        
     }
 
     /**
@@ -42,9 +43,16 @@ public class Card {
      * @param value the value to set
      */
     public void setValue(int value) {
-        this.value = value;
+       
+        if (value >= 1 && value <= 13) {
+            this.value = value;
+        } 
+        else {
+            throw new IllegalArgumentException("Error: Value must be between 1-13");
+        }
     }
    
-   
+
+    
     
 }
