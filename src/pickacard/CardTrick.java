@@ -36,8 +36,8 @@ public class CardTrick {
         String suit = in.nextLine();
         // and search magicHand here
         Card luckyCard = new Card();
-        main.setValue(1);
-        main.setSuit("Hearts");
+        luckyCard.setValue(1);
+        luckyCard.setSuit("Hearts");
         //Then report the result here
         for (int j = 0; j < magicHand.length; j++) {
             if ((magicHand[j].getValue() == luckyCard.getValue())
