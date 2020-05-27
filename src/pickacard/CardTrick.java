@@ -37,12 +37,21 @@ public class CardTrick {
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
         //Then report the result here
-        Scanner input = new Scanner(System.in);
-        System.out.println("\nWhat is your suit?");
-        String suit = input.nextLine();
-        System.out.println("What is your Card Value?");
-        int value = input.nextInt();
-        System.out.println();
+        
+        //Step 4. of the assignment
+//         Scanner input = new Scanner(System.in);
+//         System.out.println("\nWhat is your suit?");
+//         String suit = input.nextLine();
+//         System.out.println("What is your Card Value?");
+//         int value = input.nextInt();
+//         System.out.println();
+        
+        // Step 6. of the assignment
+        Card luckyHand = new Card();
+        String suit = "Hearts";
+        int value = 5;
+        luckyHand.setSuit(suit);
+        luckyHand.setValue(value);
         
         // Validating results here 
         for (int i = 0; i < magicHand.length; i++) {
