@@ -40,14 +40,20 @@ public class CardTrick {
         
         Card luckyCard = new Card();
         luckyCard.setValue(1);
+        boolean isWinner = false;
         luckyCard.setSuit("Diamond");
         for (int j = 0; j < magicHand.length; j++) {
             if ((magicHand[j].getValue() == luckyCard.getValue())
-                    && (magicHand[j].getSuit().equals(luckyCard.getValue()))) {
-                   System.out.println("Congrats! You won");
-            }else{
-                System.out.println("Better luck next time");
+                    && (magicHand[j].getSuit().equalsIgnoreCase(luckyCard.getSuit()))) {
+                   isWinner = true;
             }
+        }
+        
+        
+        if(isWinner == true){
+            System.out.println("Congrats! You Win");
+        }else{
+            System.out.println("Sorry ! Better luck next time");
         }
         
     }
