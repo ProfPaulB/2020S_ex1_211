@@ -67,7 +67,7 @@ public class CardTrick {
         
         //print player card
         String format = "\nYour card is %d of %s.\n";
-        System.out.printf(format, luckyCard.getValue(), playerCard.getSuit());
+        System.out.printf(format, luckyCard.getValue(), luckyCard.getSuit());
 
         //search card in magic hand
         luckyCard.isInMagicHand(luckyCard, magicHand);
@@ -77,10 +77,4 @@ public class CardTrick {
         
     }
     
-    
-    
-
-        
-    
-
 }
