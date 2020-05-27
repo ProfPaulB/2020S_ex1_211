@@ -11,7 +11,6 @@ import java.util.Scanner;
  * @author Paul Bonenfant
  * @author Diljeet Singh
  */
-
 public class CardTrick {
 
     public static void main(String[] args) {
@@ -20,12 +19,13 @@ public class CardTrick {
 
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
+
             //c.setValue(insert call to random number generator here)
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
             int value = (int) (Math.random() * 13 + 1);
             c.setValue(value);
             c.setSuit(Card.SUITS[(int) (Math.random() * 4)]);
-            magicHand[i] = c;
+            magicHand[i] = c;//storing the values in the class object
         }
 
         //insert code to ask the user for Card value and suit, create their card
@@ -35,28 +35,28 @@ public class CardTrick {
         int cardNumber = input.nextInt();
         System.out.println("Enter the card suit");
         String suit = input.nextLine();
-        */
+         */
         // and search magicHand here
         //Then report the result here   
-        
-        Card luckyCard = new Card();
+        Card luckyCard = new Card(); //creating object for lucky card
         luckyCard.setValue(1);
         boolean isWinner = false;
         luckyCard.setSuit("Diamond");
-        for (int j = 0; j < magicHand.length; j++) {
+        for (int j = 0; j < magicHand.length; j++) { //running loop for random 
+            //seven cards that we generated to find lucky card      
             if ((magicHand[j].getValue() == luckyCard.getValue())
-                    && (magicHand[j].getSuit().equalsIgnoreCase(luckyCard.getSuit()))) {
-                   isWinner = true;
+                    && (magicHand[j].getSuit().
+                            equalsIgnoreCase(luckyCard.getSuit()))) {
+                isWinner = true;
             }
         }
-        
-        
-        if(isWinner == true){
+
+        if (isWinner == true) {
             System.out.println("Congrats! You Win");
-        }else{
+        } else {
             System.out.println("Sorry ! Better luck next time");
         }
-        
+
     }
 
 }
