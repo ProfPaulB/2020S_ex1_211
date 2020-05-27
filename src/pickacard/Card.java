@@ -8,6 +8,7 @@ package pickacard;
  * This code is to be used in Exercise 1. When you create your own branch,
  * add your name as an author.
  * @author dancye
+ * @author Paul Bonenfant
  * @author Diljeet Singh
  */
 public class Card {
