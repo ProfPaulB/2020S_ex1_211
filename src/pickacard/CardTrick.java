@@ -17,12 +17,13 @@ public class CardTrick {
         
         Scanner input = new Scanner(System.in); // scanner object
         Card[] magicHand = new Card[7];
+        Card luckyCard = new Card();// luckyCard object
         
         //Lucky Card is 5 Hearts.
         luckyCard.setValue(5);
         luckyCard.setSuit(Card.SUITS[0]);
         
-    
+        /*
         System.out.println("Please enter a value");
         int crdValue = Integer.valueOf(input.nextLine()); //input for card value
         System.out.println("Please choose a suit (exp. 1) :");
@@ -31,11 +32,11 @@ public class CardTrick {
                 + "3.Spades\n"
                 + "4.Clubs");
         int suitValue = Integer.valueOf(input.nextLine()); // input for card suit      
-        
+        */
                 
     
         
-        int matching = 0; // int if person card matheches with random numbers 
+        boolean matching = false; // int if person card matheches with random numbers 
         for (int i = 0; i < magicHand.length; i++) {            
             Card c = new Card();
             int rnd = (int)(Math.random()*((13+1)-1))+1; // getting random numbers between 0-13 for the card number
@@ -43,19 +44,18 @@ public class CardTrick {
             int rndsuit = (int)(Math.random()*((3-0)+1)); // getting random numbers between 0-3 for suit array.           
             String suits = c.SUITS[rndsuit]; //calling suit array
             c.setSuit(suits); //[insert call to random number between 0-3 here]
-            System.out.println(c.getValue()); // print out random card number
-            System.out.println(c.getSuit());  // print out random suit 
-            if(rnd == crdValue && suitValue == rndsuit){ // 
-                matching =+1; // adding one if person's choice matches with random numbers            
-                
+            magicHand[i]=c;
+            if(magicHand[i].equals(luckyCard)){ // 
+                matching = true; // adding one if person's choice matches with random numbers            
+                break;
             }
             
         }
         //printing out the final report
-        if(matching > 0){
-        System.out.println("Your card is in the magic hand...");
+        if(matching){
+        System.out.println("Your card is in the magic hand..."); // if the user wins
         }else{
-            System.out.println("Your card is not in the magic hand... ");
+            System.out.println("Your card is not in the magic hand... "); // if the user losses
         }
         
 
