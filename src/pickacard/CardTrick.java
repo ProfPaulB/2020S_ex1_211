@@ -51,7 +51,7 @@ public class CardTrick {
         System.out.println("*** Pick a card by its value and suit ***\n");
         
         // prompt user for card value, and set the value attribute from input
-        System.out.println("Value of your card:");
+        System.out.println("* Value of your card *");
         System.out.println("Enter the actual number for values 2 to 10."); 
         System.out.println("Enter 1 for Ace, 11 for Jack, 12 for Queen, and 13 for King."); 
         System.out.print("Enter a number for the value of your card: ");
@@ -59,7 +59,7 @@ public class CardTrick {
         userCard.setValue(input.nextInt());
         
         // prompt user for card suit, and set the suit attribute from input
-        System.out.println("\nSuit of your card:");
+        System.out.println("\n* Suit of your card *");
         System.out.println("Enter 0 for Hearts, 1 for Diamonds, 2 for Spades, and 3 for Clubs.");
         System.out.print("Enter a number for the suit of your card: ");
         
@@ -89,9 +89,9 @@ public class CardTrick {
         
         // report the result of the card match search to user
         if (isMatch)
-            System.out.println("You win! Your chosen card was found in the hand of random cards.");
+            System.out.println("You win! Your card was found in the hand of " + numOfCards + " random cards.");
         else
-            System.out.println("You lose. Your chosen card was not found in the hand of random cards.");
+            System.out.println("You lose. Your card was not found in the hand of " + numOfCards + " random cards.");
 
     }
 
