@@ -9,7 +9,7 @@ import java.util.Scanner;
  *
  * @author dancye
  * @author Paul Bonenfant
- * @author Ashley Sun
+ * @author Ashley Sun May 5, 2020
  */
 public class CardTrick {
 
@@ -28,12 +28,12 @@ public class CardTrick {
             c.setSuit(Card.SUITS[(int) (Math.random() * 3)]);
             magicHand[i] = c;
         }
-        //check magicHand - comment out
+        /*check magicHand - comment out
         String format = "Card Value:%d++Card Suit:%s%n";
         for (Card c : magicHand) {
             System.out.printf(format, c.getValue(), c.getSuit());
         }
-
+        */
         //insert code to ask the user for Card value and suit, create their card
         Scanner input = new Scanner(System.in);
         Card userCard = new Card();
@@ -53,16 +53,18 @@ public class CardTrick {
         userCard.setSuit(Card.SUITS[userSuit]);
         userCard.setValue(userValue);
 
-        //check user card - comment out 
+        /*check user card - comment out 
         System.out.printf("Your card is %d%s", userCard.getValue(),
                  userCard.getSuit());
-
+        
         //can get value and suit of each card in the magic hand - comment out
         System.out.print("\nTesting something for searching magicHand; "
                 + "The first card is magicHand is: ");
         int cardValue = magicHand[0].getValue();
         String cardSuit = magicHand[0].getSuit();
         System.out.println(cardValue + cardSuit);
+        */
+        
         //search through magic hand here
         //compare user's card to a card in magic hand
         boolean sameValue;//card value is the same
@@ -82,7 +84,6 @@ public class CardTrick {
                 isMatched = true;
             }
         }
-
         //Then report the result here
         if (isMatched) {
             System.out.println("Your card was in the Magic Hand!");
