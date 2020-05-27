@@ -32,7 +32,12 @@ public class CardTrick {
         for (Card c : magicHand) {
             System.out.printf("Card value/suit: %d/%s%n", c.getValue(), c.getSuit());
         }
-
+        
+        //Complete Task 6: add a luckyCard object and assign the value to 5 and "Hearts"
+        Card luckyCard = new Card();
+        luckyCard.setValue(5);
+        luckyCard.setSuit("Hearts");
+        
         /**
          * Complete task 4 part1: ask the user for the card value and suit and
          * check data validation
