@@ -41,8 +41,8 @@ public class CardTrick {
             
     
         Card luckyHand = new Card();
-        String suit = "Clubs";
-        int value = 10;
+        String cardSuit = "Clubs";
+        int cardValue = 10;
         luckyHand.setValue(cardValue);
         luckyHand.setSuit(cardSuit);
        
