@@ -23,6 +23,11 @@ public class CardTrick {
         
         Card userChoice = new Card(); 
         
+        //adding my luckyCard object 
+        Card luckyCard = new Card ();
+        luckyCard.setValue(3);
+        luckyCard.setSuit("Diamonds");
+        
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
             
