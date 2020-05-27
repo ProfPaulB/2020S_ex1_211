@@ -42,6 +42,11 @@ public class CardTrick {
         // and search magicHand here
         //Then report the result here
         
+        // Hard-coded luckyCard goes here, will replace userChoice shortly.
+        Card luckyCard = new Card();
+        luckyCard.setValue(1);
+        luckyCard.setSuit("Spades");
+        
         // Create a new card to store users card choice
         Card userCard = new Card();
 
