@@ -47,7 +47,8 @@ public class CardTrick {
         }
         if (winn == true) {
             System.out.println("Congrats! You Win");
-        }
+        }  else{
+            System.out.println("lost");}
         System.out.printf("the results are", value, "and", suit);
 
     }
