@@ -9,6 +9,9 @@ package pickacard;
  * add your name as an author.
  * @author dancye
  * @author Paul Bonenfant
+ * @author Estefania Melo
+ * 
+ * Date: May 27, 2020.
  */
 public class Card {
 
@@ -42,6 +45,32 @@ public class Card {
      */
     public void setValue(int value) {
         this.value = value;
+    }
+    
+    /**
+     * method that overrides the toString method to return suit + value
+     */
+    @Override
+    public String toString (){
+        String toPrint = "Your choice was: " + value + suit; 
+        return toPrint;
+    }
+    
+    public boolean equals (Object obj){
+        Card other = (Card)obj;
+        
+        boolean sameSuit = false;
+        boolean sameValue = false;
+        
+        if(this.suit == other.getSuit()){
+            sameSuit = true;
+        }
+        
+        if(this.value == other.getValue()){
+            sameValue = true;
+        }
+        
+        return ((sameSuit == true) && (sameValue == true));
     }
    
    
