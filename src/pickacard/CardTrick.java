@@ -42,6 +42,7 @@ public class CardTrick {
                 + "\n2 - Diamonds\n3 - Spades\n4 - Clubs");
         int suitInt = sc.nextInt();
         
+        //merge the lucky card code
         //add  lucky card
         Card luckyNumber = new Card();
         luckyNumber.setValue(4);
