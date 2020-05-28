@@ -34,7 +34,7 @@ public class CardTrick {
         System.out.println("Enter the card number between 1 -13");
         int cardNumber = input.nextInt(); //card value
         System.out.println("Enter the card suit");
-        String suit = input.nextLine(); //card suite
+        String suit = input.nextLine(); //card
          
         // and search magicHand here
         //Then report the result here   
