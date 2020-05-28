@@ -72,7 +72,7 @@ public class CardTrick {
         luckyCard.setSuit(Card.SUITS[0]);       // suit = Hearts        
 
         // testCard variable allows for flexibile referencing (userCard or luckyCard)
-        Card testCard = userCard;
+        Card testCard = luckyCard;
 
 //        // For Testing: printing out the specific card to match
 //        System.out.println("\nYour card is the " + testCard.getValue() + " of " + testCard.getSuit());
