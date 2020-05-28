@@ -32,9 +32,9 @@ public class CardTrick {
         
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the card number between 1 -13");
-        int cardNumber = input.nextInt();
+        int cardNumber = input.nextInt(); //card value
         System.out.println("Enter the card suit");
-        String suit = input.nextLine();
+        String suit = input.nextLine(); //card suite
          
         // and search magicHand here
         //Then report the result here   
