@@ -43,28 +43,28 @@ public class CardTrick {
 //        }
 //        // === End of Testing Block ===
 
-        // === Start of User Input Block ===
-        // ask the user for Card value and suit, and store as a Card object
-        Scanner input = new Scanner(System.in);
-        Card userCard = new Card();
-        System.out.println("*** Pick a card by its value and suit ***\n");
-
-        // prompt user for card value, and set the value attribute from input
-        System.out.println("* Value of your card *");
-        System.out.println("Enter the actual number for values 2 to 10.");
-        System.out.println("Enter 1 for Ace, 11 for Jack, 12 for Queen, and 13 for King.");
-        System.out.print("Enter a number for the value of your card: ");
-
-        userCard.setValue(input.nextInt());
-
-        // prompt user for card suit, and set the suit attribute from input
-        System.out.println("\n* Suit of your card *");
-        System.out.println("Enter 0 for Hearts, 1 for Diamonds, 2 for Spades, and 3 for Clubs.");
-        System.out.print("Enter a number for the suit of your card: ");
-
-        userCard.setSuit(Card.SUITS[input.nextInt()]);
-
-        // === End of User Input Block ===
+//        // === Start of User Input Block ===
+//        // ask the user for Card value and suit, and store as a Card object
+//        Scanner input = new Scanner(System.in);
+//        Card userCard = new Card();
+//        System.out.println("*** Pick a card by its value and suit ***\n");
+//
+//        // prompt user for card value, and set the value attribute from input
+//        System.out.println("* Value of your card *");
+//        System.out.println("Enter the actual number for values 2 to 10.");
+//        System.out.println("Enter 1 for Ace, 11 for Jack, 12 for Queen, and 13 for King.");
+//        System.out.print("Enter a number for the value of your card: ");
+//
+//        userCard.setValue(input.nextInt());
+//
+//        // prompt user for card suit, and set the suit attribute from input
+//        System.out.println("\n* Suit of your card *");
+//        System.out.println("Enter 0 for Hearts, 1 for Diamonds, 2 for Spades, and 3 for Clubs.");
+//        System.out.print("Enter a number for the suit of your card: ");
+//
+//        userCard.setSuit(Card.SUITS[input.nextInt()]);
+//
+//        // === End of User Input Block ===
         
         // luckyCard Card object is Hard-Coded as Queen of Hearts
         Card luckyCard = new Card();
