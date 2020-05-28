@@ -67,6 +67,10 @@ public class CardTrick {
         
         // === End of User Input Block ===
         
+		// luckyCard Card object is Hard-Coded as Queen of Hearts
+		Card luckyCard = new Card();
+		luckyCard.setValue(12);				// value = Queen / 12
+		luckyCard.setSuit(Card.SUITS[0]); 	// suit = Hearts        
         
         // testCard variable allows for flexibile referencing (userCard or luckyCard)
         Card testCard = userCard;      
