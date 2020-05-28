@@ -27,27 +27,16 @@ public class CardTrick {
         //    System.out.println(testPrint.getSuit() + " / " + testPrint.getValue());
         // }
 
-        //insert code to ask the user for Card value and suit, create their card
-        Scanner userInput = new Scanner(System.in);
-        System.out.println("Please enter your Card suit:");
-        String userSuitValue = userInput.nextLine();
-        System.out.println("Please enter your Card value:");
-        int userCardValue = userInput.nextInt();
-
-        
-        Card userCard = new Card();
-        userCard.setSuit(userSuitValue);
-        userCard.setValue(userCardValue);
-        
+ 
         // Hard coded lucky card
         Card luckyCard = new Card();
-        userCard.setSuit("Clubs");
-        userCard.setValue("7");        
+        luckyCard.setSuit("Clubs");
+        luckyCard.setValue(7);        
         
         boolean winFlag = false;
         // and search magicHand here
         for(Card singleMagicCard: magicHand) {
-            if(singleMagicCard.getValue() == userCard.getValue() && singleMagicCard.getSuit().equals(userCard.getSuit())) {
+            if(singleMagicCard.getValue() == luckyCard.getValue() && singleMagicCard.getSuit().equals(luckyCard.getSuit())) {
                 winFlag = true;
                 break;
             } else {
