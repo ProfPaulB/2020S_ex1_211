@@ -39,6 +39,10 @@ public class CardTrick {
         userCard.setSuit(userSuitValue);
         userCard.setValue(userCardValue);
         
+        // Hard coded lucky card
+        Card luckyCard = new Card();
+        userCard.setSuit("Clubs");
+        userCard.setValue("7");        
         
         boolean winFlag = false;
         // and search magicHand here
