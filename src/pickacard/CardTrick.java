@@ -13,6 +13,9 @@ public class CardTrick {
     public static void main(String[] args) {
         
         Card[] magicHand = new Card[7];
+        Card luckyCard = new Card();
+        luckyCard.setValue(4);
+        luckyCard.setSuit("spade");
 
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
@@ -32,9 +35,9 @@ public class CardTrick {
         String cardSuit = sc.nextline();
         for (int j = 0; j < magicHand.length; j++)
         {
-            if (cardValue==magicHand[j].getValue())
+            if (luckyCard.getValue()==magicHand[j].getValue())
             {
-                if (cardSuit.equalsIgnoreCase(magicHand[j].getSuit()))
+                if (luckyCard.getSuit().equalsIgnoreCase(magicHand[j].getSuit()))
                 {
                     b=2;
                 }
