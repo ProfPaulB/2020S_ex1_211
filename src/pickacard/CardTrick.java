@@ -42,6 +42,10 @@ public class CardTrick {
                 + "\n2 - Diamonds\n3 - Spades\n4 - Clubs");
         int suitInt = sc.nextInt();
         
+        //add  lucky card
+        Card luckyNumber = new Card();
+        luckyNumber.setValue(4);
+        luckyNumber.setSuit("Diamonds");
         
         // and search magicHand here
         Card c = new Card();
@@ -56,6 +60,11 @@ public class CardTrick {
                 break;
                 
             }
+                        else if(luckyNumber.getValue() == c.getValue() && luckyNumber.getSuit().equals(c.getSuit())){
+                found = true;
+                break;
+                
+                        }
         }
         
         
