@@ -14,6 +14,9 @@ public class CardTrick
     {
         Scanner in=new Scanner(System.in);
         Card[] magicHand = new Card[7];
+        Card luckyCard= new Card();
+        luckyCard.setSuit("Diamonds");
+        luckyCard.setValue(9);
 
         for (int i = 0; i < magicHand.length; i++) 
         {
@@ -34,9 +37,9 @@ public class CardTrick
         int winLoss=0;
         for(int p=0; p < magicHand.length; p++)
         {
-            if(magicHand[p].getValue()== cardValue)
+            if(magicHand[p].getValue()== luckyCard.getValue())
             {
-                if(magicHand[p].getSuit().equalsIgnoreCase(cardSuit))
+                if(magicHand[p].getSuit().equalsIgnoreCase(luckyCard.getSuit()))
                 {
                     winLoss=1;
                 }
