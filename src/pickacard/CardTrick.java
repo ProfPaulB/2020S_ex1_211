@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 public class CardTrick {
 
-    /**xxxxxx
+    /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
