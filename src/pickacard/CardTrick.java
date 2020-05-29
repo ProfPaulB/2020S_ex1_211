@@ -39,20 +39,26 @@ public class CardTrick {
                 
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
-                                        
+       /*                                 
         Scanner in = new Scanner(System.in);
         System.out.println("Pick one value from 1 to 13 : ");
         int valueOfUser = in.nextInt();
 
         System.out.println("Type one suit: \n1:Hearts\n2:Diamonds\n3:Spades\n4:Clubs");
         String SuitOfUser = in.next();
-
+       */
+       
+       Card luckyCard = new Card();
+       luckyCard.setValue(2);
+       luckyCard.setSuit("Hearts");
+       
+       
         //Then report the result here
         for (int i = 0; i < magicHand.length; i++) {
            
-            if (valueOfUser == magicHand[i].getValue() && SuitOfUser.equals(magicHand[i].getSuit())) {
+            if (luckyCard.getValue() == magicHand[i].getValue() && luckyCard.getSuit().equals(magicHand[i].getSuit())) {
                 System.out.println("congratulation! You win!");
-                System.out.println("your value and suit are " + valueOfUser +"," + SuitOfUser
+                System.out.println("your value and suit are " + luckyCard.getValue() +"," + luckyCard.getSuit()
             +"\n They are matched with " +magicHand[i].getValue()+" and " + magicHand[i].getSuit());
                 
                 break;
