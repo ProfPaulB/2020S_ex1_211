@@ -30,20 +30,13 @@ public class CardTrick {
             c.setSuit(Card.SUITS[rand.nextInt(3) + 1]);//set the random number for suit
             magicHand[i] = c;
         }
-
         /**
-         * Ask the user for Card value and suit
-         */
-        int val;
-        String suit;
-        Card user = new Card();
-        Scanner input = new Scanner(System.in);//creat scaner
-        System.out.println("Enter the card value(1-13)");//user value entry
-        val = input.nextInt();
-        System.out.println("chosse the card suite(\"Hearts\"or \"Diamonds\"or \"Spades\"or\"Clubs\")");
-        suit = input.next();//user suit entry
-        user.setValue(val);
-        user.setSuit(suit);
+        *(hard-coded) Card Object called luckyCard
+        */
+        Card luckyCard=new Card();
+        luckyCard.setSuit("Diamonds");
+        luckyCard.setValue(10);
+        
         /**
          * compare the entry with the magic hand element
          */
