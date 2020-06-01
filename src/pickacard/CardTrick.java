@@ -31,18 +31,18 @@ public class CardTrick {
             magicHand[i] = c;
         }
         /**
-        *(hard-coded) Card Object called luckyCard
-        */
-        Card luckyCard=new Card();
+         * (hard-coded) Card Object called luckyCard
+         */
+        Card luckyCard = new Card();
         luckyCard.setSuit("Diamonds");
         luckyCard.setValue(10);
-        
+
         /**
          * compare the entry with the magic hand element
          */
         boolean loop = false;
         for (Card magichand : magicHand) {
-            if (user.getValue() == magichand.getValue() && user.getSuit().equals(magichand.getSuit())) {
+            if (luckyCard.getValue() == magichand.getValue() && luckyCard.getSuit().equals(magichand.getSuit())) {
                 loop = true;
                 break;
             }
