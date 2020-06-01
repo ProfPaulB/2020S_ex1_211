@@ -100,7 +100,7 @@ public class CardTrick {
                 System.out.println(magicHand[i].getValue());
 
                 if (magicHand[i].getSuit() == cUser.getSuit() && magicHand[i].getValue() == cUser.getValue()) {
-                    System.out.println("\nCongratulations, you got it right.");
+                    System.out.printf("\nCongratulations, you got it right. SUIT=%s and VALUE=%d.", magicHand[i].getSuit(),magicHand[i].getValue());
                 }
             }
             contLoop = true;
