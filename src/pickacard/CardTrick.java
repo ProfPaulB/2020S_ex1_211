@@ -2,7 +2,6 @@ package pickacard;
 
 import java.util.Random;
 import java.util.Scanner;
-import static pickacard.Card.SUITS;
 
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects and then asks the user to pick a card and
@@ -45,10 +44,10 @@ public class CardTrick {
         boolean loop;
        for (int i = 0; i < magicHand.length; i++)
             if (user.getValue()==magicHand[i].getValue()&&user.getSuit().equals(magicHand[i].getSuit()))
-                sout
+                
             {}
                 }
 
     }
 
-}
+
