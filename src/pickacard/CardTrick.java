@@ -35,12 +35,10 @@ public class CardTrick {
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
             magicHand[i] = c;
         }
-
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
         //Then report the result here
         boolean contLoop;
-
         do {
             Card cUser = new Card();
             // select SUIT
@@ -91,14 +89,11 @@ public class CardTrick {
 
 //            System.out.println(cUser.getValue());
 //            System.out.println(cUser.getSuit());
-
             System.out.println("---------------------------------");
             for (int i = 0; i < 7; i++) {
-
                 System.out.println(magicHand[i]);
                 System.out.print(magicHand[i].getSuit());
                 System.out.println(magicHand[i].getValue());
-
                 if (magicHand[i].getSuit() == cUser.getSuit() && magicHand[i].getValue() == cUser.getValue()) {
                     System.out.printf("\nCongratulations, you got it right. SUIT=%s and VALUE=%d.", magicHand[i].getSuit(),magicHand[i].getValue());
                 }
@@ -114,8 +109,6 @@ public class CardTrick {
             if ("n".equals(again) || "N".equals(again)) {
                 contLoop = false;
             }
-
         } while (contLoop);
     }
-
 }
