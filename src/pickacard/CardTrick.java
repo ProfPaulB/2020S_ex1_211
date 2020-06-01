@@ -33,7 +33,7 @@ public class CardTrick {
         //Then report the result here
         int val;
         String suit;
-        Card user=new Card();
+        Card user = new Card();
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the card value(1-13)");
         val = input.nextInt();
@@ -41,13 +41,16 @@ public class CardTrick {
         suit = input.next();
         user.setValue(val);
         user.setSuit(suit);
-        boolean loop;
-       for (int i = 0; i < magicHand.length; i++)
-            if (user.getValue()==magicHand[i].getValue()&&user.getSuit().equals(magicHand[i].getSuit()))
-                
-            {}
-                }
-
+        boolean loop = false;
+        for (int i = 0; i < magicHand.length; i++) {
+            if (user.getValue() == magicHand[i].getValue() && user.getSuit().equals(magicHand[i].getSuit())) {
+                loop = true;
+            }
+        }
+        if (loop) {
+            System.out.println("You Win!!!");
+        } else {
+            System.out.println("Sorry you lost try again");
+        }
     }
-
-
+}
