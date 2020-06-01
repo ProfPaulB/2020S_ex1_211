@@ -8,8 +8,8 @@ import java.util.Scanner;
  * asks the user to pick a card and searches the array of cards for the match to
  * the user's card. To be used as starting code in ICE 1
  *
- * @author dancye
- * @author Paul Bonenfant
+ * @author deGamboa
+ * @version 1.0
  */
 public class CardTrick {
 
@@ -21,8 +21,9 @@ public class CardTrick {
         String suitx = null;
         int valuex = 0;
 
+        
+        // creat 7x 
         for (int i = 0; i < magicHand.length; i++) {
-//        for (Card magicHand1 : magicHand) {
             Card c = new Card();
             int r;
             r = rand.nextInt(4);
@@ -42,6 +43,7 @@ public class CardTrick {
 
         do {
             Card cUser = new Card();
+            // select SUIT
             do {
                 contLoop = false;
                 System.out.print("\nChoose a SUIT (1)Herats / (2)Diamonds / (3)Spades / (4)Club): ");
