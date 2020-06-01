@@ -89,26 +89,20 @@ public class CardTrick {
                 inputScan = new Scanner(System.in);
             } while (contLoop);
 
-            System.out.println(cUser.getValue());
-            System.out.println(cUser.getSuit());
-            System.out.println(cUser.getClass());
+//            System.out.println(cUser.getValue());
+//            System.out.println(cUser.getSuit());
 
             System.out.println("---------------------------------");
             for (int i = 0; i < 7; i++) {
 
                 System.out.println(magicHand[i]);
-
                 System.out.print(magicHand[i].getSuit());
-
                 System.out.println(magicHand[i].getValue());
 
                 if (magicHand[i].getSuit() == cUser.getSuit() && magicHand[i].getValue() == cUser.getValue()) {
-                    System.out.println("IQUAL");
-
+                    System.out.println("\nCongratulations, you got it right.");
                 }
-
             }
-
             contLoop = true;
             System.out.print("\n\nAnother Item (Y/N)? ");
             String again = inputScan.next();
