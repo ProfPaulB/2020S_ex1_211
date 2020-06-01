@@ -16,37 +16,46 @@ public class CardTrick {
     public static void main(String[] args) {
 
         Card[] magicHand = new Card[7];
+        /**
+         * set the loop to create the magic hand with 7 card
+         */
 
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
 
             //c.setValue(insert call to random number generator here)
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-            Random rand = new Random();
-            c.setValue(rand.nextInt(13) + 1);
+            Random rand = new Random();//create random object
+            c.setValue(rand.nextInt(13) + 1);//set the 
             c.setSuit(Card.SUITS[rand.nextInt(3) + 1]);
             magicHand[i] = c;
         }
 
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
+        /**
+         * Ask the user for Card value and suit
+         */
         int val;
         String suit;
         Card user = new Card();
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter the card value(1-13)");
+        Scanner input = new Scanner(System.in);//creat scaner
+        System.out.println("Enter the card value(1-13)");//user value entry
         val = input.nextInt();
         System.out.println("chosse the card suite(\"Hearts\"or \"Diamonds\"or \"Spades\"or\"Clubs\")");
-        suit = input.next();
+        suit = input.next();//user suit entry
         user.setValue(val);
         user.setSuit(suit);
+        /**
+         * compare the entry with the magic hand element
+         */
         boolean loop = false;
         for (int i = 0; i < magicHand.length; i++) {
             if (user.getValue() == magicHand[i].getValue() && user.getSuit().equals(magicHand[i].getSuit())) {
                 loop = true;
             }
         }
+        /**
+         * print the result
+         */
         if (loop) {
             System.out.println("You Win!!!");
         } else {
